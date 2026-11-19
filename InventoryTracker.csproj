@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<ItemGroup>
+	  <None Include="Program.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.89" />
+		<PackageReference Include="Microsoft.Data.Sqlite">
+		  <Version>11.0.0</Version>
+		</PackageReference>
+	</ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>InventoryTracker</RootNamespace>
+  </PropertyGroup>
+
+</Project>
