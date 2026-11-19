@@ -424,5 +424,7 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+#Other information like database info
+*.db
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
