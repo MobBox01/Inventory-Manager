@@ -1,11 +1,22 @@
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSingleton<DataCommunicator>();
-var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
+public class Program
 {
-    var db = scope.ServiceProvider.GetRequiredService<DataCommunicator>();
+    //Debug!
+    public static void Main(string[] args)
+    {
+        var communicator = new DataCommunicator();
+        var tempList = communicator.ReadInformation();
+
+        foreach(var item in tempList)
+        {
+            Console.WriteLine($@"User ID:{item.userID}
+                    ID: {item.Id}
+                    Name: {item.name}
+                    Quantity: {item.quantity}");
+        }
+    }
 }
+/**var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
@@ -19,3 +30,4 @@ app.MapGet("/", () => "Hello World!");
 //Keep track of if the object even exist for each operation
 
 app.Run();
+**/
